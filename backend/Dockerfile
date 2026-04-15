@@ -18,8 +18,13 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 
+
 COPY requirements.txt . 
 RUN pip install --no-cache-dir -r requirements.txt
+
+COPY ./mobile .
+RUN cd /app/mobile && ./gradlew help || true
+
 
 ENV ANDROID_SDK_ROOT /opt/android-sdk
 RUN mkdir -p $ANDROID_SDK_ROOT/cmdline-tools \

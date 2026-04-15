@@ -16,5 +16,6 @@
         ]
     }
   },
-  "remoteUser": "root"
+  "remoteUser": "root",
+  "postCreateCommand": "bash init-mobile.sh"
 }
