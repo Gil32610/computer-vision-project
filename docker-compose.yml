@@ -8,6 +8,8 @@ services:
       - .:/app
       - ~/.android:/root/.android
     privileged: true
+    group_add:
+      - "46"
     network_mode: "host"
     env_file:
       - .env
