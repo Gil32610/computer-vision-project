@@ -4,17 +4,18 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONBUFFERED 1
 ENV DEBIAN_FRONTEND=noninteractive
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    android-tools-adb \
+RUN apt-get update && \
+    mkdir -p /usr/share/man/man1 && \
+    apt-get install -y \
+    adb \
     curl \
     git \
     usbutils \
-    openjdk-17-jr-headless \
+    default-jre \
     wget \
     unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
 
 COPY requirements.txt . 
