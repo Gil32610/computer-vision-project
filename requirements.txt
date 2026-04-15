@@ -1,0 +1,24 @@
+# --- Web Framework & API ---
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+pydantic==2.5.3
+
+# --- Computer Vision & Math ---
+# Essential for the Szeliski-based 3D transformations
+opencv-python-headless==4.9.0.80
+numpy==1.26.3
+scipy==1.12.0  # For advanced spatial math and rotation matrices
+
+# --- Android / ADB Communication ---
+# Allows you to run ADB commands directly from Python scripts
+pure-python-adb==0.3.0.dev0
+
+# --- Presentation & Visualization ---
+# Useful if you want to generate 3D plots of your measurements for the slides
+matplotlib==3.8.2
+pandas==2.2.0
+
+# --- Development Utilities ---
+python-dotenv==1.0.1
+loguru==0.7.2

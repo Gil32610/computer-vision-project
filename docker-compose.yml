@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: computer_vision_ar_api
+    volumes:
+      - .:/app
+      - ~/.android:/root/.android
+    privileged: true
+    network_mode: "host"
+    env_file:
+      - .env
+    environment:
+      - API_KEY=${API_KEY}
+      - ANDROID_DEVICE_IP=${ANDROID_DEVICE_IP}
+      - ADB_WIFI_PORT=${ADB_WIFI_PORT:-5555} 
+    devices:
+      - "/dev/bus/usb:/dev/bus/usb"
+    
+    

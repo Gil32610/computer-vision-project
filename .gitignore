@@ -1,0 +1,7 @@
+# Environments
+.env
+.env.local
+.env.development.local
+
+# Docker logs
+*.log
