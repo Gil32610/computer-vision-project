@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   api:
-    build: .
+    build: ./backend
     container_name: computer_vision_ar_api
     volumes:
       - .:/app
