@@ -9,7 +9,10 @@
           "ms-python.python",
           "ihsanis.scrcpy",
           "eamodio.gitlens",
-          "esbenp.prettier-vscode"
+          "esbenp.prettier-vscode",
+          "fwcd.kotlin",
+          "vscjava.vscode-gradle",
+          "vscjava.vscode-java-pack"
         ]
     }
   },
