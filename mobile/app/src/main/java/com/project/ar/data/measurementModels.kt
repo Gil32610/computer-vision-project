@@ -16,7 +16,7 @@ data class MeasurementRequest(
 )
 
 data class MeasurementResponse(
-    val label: String,
+    val label: String?,
     @SerializedName("distance_meters") val distanceMeters: Float,
     @SerializedName("distance_centimeters") val distanceCm: Float
 )
