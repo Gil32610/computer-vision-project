@@ -18,11 +18,11 @@ RUN apt-get update && \
     && rm -rf /var/lib/apt/lists/*
 WORKDIR /app
 
+COPY ./backend /app/backend
+ 
+RUN pip install --no-cache-dir -r /app/backend/requirements.txt
 
-COPY requirements.txt . 
-RUN pip install --no-cache-dir -r requirements.txt
-
-COPY ./mobile .
+COPY ./mobile /app/mobile
 RUN cd /app/mobile && ./gradlew help || true
 
 
@@ -35,7 +35,6 @@ RUN mkdir -p $ANDROID_SDK_ROOT/cmdline-tools \
 
 ENV PATH=$PATH:$ANDROID_SDK_ROOT/cmdline-tools/latest/bin:$ANDROID_SDK_ROOT/platform-tools
 
-COPY . .
 
 EXPOSE 8000
 
