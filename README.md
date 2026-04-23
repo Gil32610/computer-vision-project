@@ -4,7 +4,7 @@ This guide outlines the steps to establish a wireless ADB bridge between a physi
 
 ## 1. Prerequisites
 
-- **Container:** Docker + VS Code Dev Containers
+- **Container:** Docker Engine + VS Code Dev Containers
 - **Device:** Android Device with Google Play Services AR support
 - **Network:** Devices should be connected on the same network.
 
@@ -13,12 +13,10 @@ This guide outlines the steps to establish a wireless ADB bridge between a physi
 Create a `.env` file in the project root:
 
 ```bash
-API_SECRET_KEY=your_generated_hex_here
-ANDROID_DEVICE_IP=your_android_device_ip
-ADB_WIFI_PORT=5555
-PROJECT_MODE=development
-PORT=8000
+cp .example.env .env
 ```
+
+On VS Code, install the Dev Container Extension. Hit `CTRL + SHIFT + P` and search for Rebuild and Reopen in Container. It should start building the Container for the application. (Ensure the Docker Engine is running and you are logged in)
 
 ## 3. The Wireless Handshake (Step-by-Step)
 
